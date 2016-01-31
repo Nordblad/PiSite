@@ -12,9 +12,9 @@ namespace PiPage.Controllers
     {
         public IActionResult Index()
         {
-            SQLiteConnection conn = new SQLiteConnection("Data Source=testdb.db;Version=3;");
+            SQLiteConnection conn = new SQLiteConnection("Data Source=../testdb.db;Version=3;");
             conn.Open();
-            string sql = "SELECT * FROM links";
+            string sql = "SELECT * FROM posts";
             SQLiteCommand cmd = new SQLiteCommand(sql, conn);
 
             SQLiteDataReader reader = cmd.ExecuteReader();
