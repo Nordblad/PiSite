@@ -6,6 +6,12 @@
     <div class="col-md-6">
         <h4>TEST!</h4>
         This should get updated I think!
+        <ul>
+        @foreach (string s in ViewBag.db)
+        {
+            <li>@s</li>
+        }
+        </ul>
     </div>
 </div>
 
