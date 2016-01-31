@@ -1,12 +1,10 @@
 {
-  "version": "1.0.0-*",
+  "commands": {
+    "web": "Microsoft.AspNet.Server.Kestrel --server.urls http://*:5000"
+  },
   "compilationOptions": {
     "emitEntryPoint": true
   },
-  "tooling": {
-    "defaultNamespace": "PiPage"
-  },
-
   "dependencies": {
     "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final",
     "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
@@ -19,29 +17,23 @@
     "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final"  },
-
-  "commands": {
-    "web": "Microsoft.AspNet.Server.Kestrel --server.urls http://*:5000"
+    "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
+    "System.Data.SQLite.Core": "1.0.99",
+    "System.Data.SQLite": "1.0.99"
   },
-
-  "frameworks": {
-    "dnx451": {
-      "dependencies": {
-        "System.Data.SQLite.Core": "1.0.99"
-      },
-      "frameworkAssemblies": {
-        "System.Data": "4.0.0.0"
-      }
-    },
-    "dnxcore50": {}
-  },
-
   "exclude": [
     "wwwroot",
     "node_modules",
     "bower_components"
   ],
+
+  "frameworks": {
+    "dnx451": {
+      "frameworkAssemblies": {
+        "System.Data": "4.0.0.0"
+      }
+    }
+  },
   "publishExclude": [
     "node_modules",
     "bower_components",
@@ -56,5 +48,9 @@
       "gulp clean",
       "gulp min"
     ]
-  }
+  },
+  "tooling": {
+    "defaultNamespace": "PiPage"
+  },
+  "version": "1.0.0-*"
 }
