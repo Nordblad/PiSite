@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using System.Data;
-using Mono.Data.SQLite; //Testing
+using Mono.Data.SQLiteClient; //Testing
 
 namespace PiPage.Controllers
 {
